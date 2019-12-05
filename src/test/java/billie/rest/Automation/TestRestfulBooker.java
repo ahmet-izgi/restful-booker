@@ -100,7 +100,7 @@ public class TestRestfulBooker {
 		// Check deleted item is not accessible
 		try {
 			given().accept(ContentType.ANY).get("https://restful-booker.herokuapp.com/booking/" + bookId).then()
-					.statusCode(200).extract().response();
+					.statusCode(404).extract().response();
 		} catch (Exception ex) {
 			Assert.assertTrue(ex instanceof HttpResponseException && ex.getMessage().contains("Not Found"),
 					"Expected 'Not Found' but actual is different!");
