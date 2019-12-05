@@ -24,7 +24,7 @@ import io.restassured.specification.RequestSpecification;
  *
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class RestfulBooker {
+public class TestRestfulBooker {
 
 	private static RequestSpecification requestSpecification;
 
