@@ -9,10 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.hamcrest.Matchers;
-import org.junit.Assert;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
 import io.restassured.internal.http.HttpResponseException;
@@ -23,10 +21,7 @@ import io.restassured.specification.RequestSpecification;
  * @author ahmetizgi
  *
  */
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestRestfulBooker {
-
-	private static RequestSpecification requestSpecification;
 
 	private static int bookId;
 
@@ -46,8 +41,8 @@ public class TestRestfulBooker {
 
 		// Check request and body booking details correct
 		for (Map.Entry bookingField : booking.entrySet()) {
-			Assert.assertEquals("Posted \"" + bookingField.getKey() + "\" not found in response body. ",
-					bookingField.getValue(), responseBodyMap.get(bookingField.getKey()));
+			Assert.assertEquals(bookingField.getValue(), responseBodyMap.get(bookingField.getKey()),
+					"Posted \"" + bookingField.getKey() + "\" not found in response body. ");
 		}
 
 	}
@@ -69,8 +64,8 @@ public class TestRestfulBooker {
 
 		// Check request and body booking details correct
 		for (Map.Entry bookingField : booking.entrySet()) {
-			Assert.assertEquals("Posted \"" + bookingField.getKey() + "\" not found in response body. ",
-					bookingField.getValue(), responseBodyMap.get(bookingField.getKey()));
+			Assert.assertEquals(bookingField.getValue(), responseBodyMap.get(bookingField.getKey()),
+					"Put \"" + bookingField.getKey() + "\" not found in response body. ");
 		}
 	}
 
@@ -90,8 +85,8 @@ public class TestRestfulBooker {
 
 		// Check request and body booking details correct
 		for (Map.Entry bookingField : booking.entrySet()) {
-			Assert.assertEquals("Expected \"" + bookingField.getKey() + "\" not found in response body. ",
-					bookingField.getValue(), responseBodyMap.get(bookingField.getKey()));
+			Assert.assertEquals(bookingField.getValue(), responseBodyMap.get(bookingField.getKey()),
+					"Expected \"" + bookingField.getKey() + "\" not found in response body. ");
 		}
 	}
 
@@ -107,8 +102,8 @@ public class TestRestfulBooker {
 			given().accept(ContentType.ANY).get("https://restful-booker.herokuapp.com/booking/" + bookId).then()
 					.statusCode(200).extract().response();
 		} catch (Exception ex) {
-			Assert.assertTrue("Expected 'Not Found' but actual is different!",
-					ex instanceof HttpResponseException && ex.getMessage().contains("Not Found"));
+			Assert.assertTrue(ex instanceof HttpResponseException && ex.getMessage().contains("Not Found"),
+					"Expected 'Not Found' but actual is different!");
 		}
 
 	}

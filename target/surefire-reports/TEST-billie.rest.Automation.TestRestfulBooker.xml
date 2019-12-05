@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="billie.rest.Automation.TestRestfulBooker" time="11.1" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="billie.rest.Automation.TestRestfulBooker" time="17.837" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="13.0.1+9"/>
@@ -22,7 +22,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/ahmetizgi/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf2040826988655040882.tmp"/>
+    <property name="classworlds.conf" value="/Users/ahmetizgi/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf16487542171772825441.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/ahmetizgi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="jdk.debug" value="release"/>
@@ -55,8 +55,8 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0001_createBooking" time="5.84"/>
-  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0002_updateBooking" time="1.766"/>
-  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0003_getBooking" time="0.87"/>
-  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0004_deleteBooking" time="2.624"/>
+  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0001_createBooking" time="6.765"/>
+  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0002_updateBooking" time="2.304"/>
+  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0003_getBooking" time="6.265"/>
+  <testcase classname="billie.rest.Automation.TestRestfulBooker" name="test_0004_deleteBooking" time="2.503"/>
 </testsuite>

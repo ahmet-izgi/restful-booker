@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="billie.rest.TestRestfulBooker">
+	<test name="TestRestfulBooker">
+		<classes>
+			<class name="billie.rest.Automation.TestRestfulBooker">
+				<methods>
+					<include name="test_0001_createBooking" />
+					<include name="test_0002_updateBooking" />
+					<include name="test_0003_getBooking" />
+					<include name="test_0004_deleteBooking" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

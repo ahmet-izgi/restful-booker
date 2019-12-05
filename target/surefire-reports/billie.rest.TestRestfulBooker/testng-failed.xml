@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [billie.rest.TestRestfulBooker]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="TestRestfulBooker(failed)" verbose="0">
+    <classes>
+      <class name="billie.rest.Automation.TestRestfulBooker">
+        <methods>
+          <include name="test_0002_updateBooking"/>
+          <include name="test_0003_getBooking"/>
+        </methods>
+      </class> <!-- billie.rest.Automation.TestRestfulBooker -->
+    </classes>
+  </test> <!-- TestRestfulBooker(failed) -->
+</suite> <!-- Failed suite [billie.rest.TestRestfulBooker] -->
